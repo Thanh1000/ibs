@@ -6,11 +6,11 @@
 #include <raylib.h>
 
 void display_all_devices(void) {
-#define MAX_WIDTH 250
+#define MAX_WIDTH 50
   char buf[MAX_WIDTH + 1];
   const AVInputFormat *fmt = NULL;
   char *src, *dst;
-  int i = 0;
+  int i = 1;
 
   while ((fmt = av_input_audio_device_next(fmt)) != NULL) {
     dst = buf;
@@ -31,7 +31,7 @@ void display_all_devices(void) {
 
     *dst = 0;
 
-    DrawText(buf, 20, 20 * (i + 1), 10, BLACK);
+    DrawText(buf, 20, 20 * (3 * i), 10, BLACK);
     i++;
   }
 }
