@@ -9,7 +9,6 @@ void display_all_devices(void) {
 #define MAX_WIDTH 250
   char buf[MAX_WIDTH + 1];
   const AVInputFormat *fmt = NULL;
-  size_t len;
   char *src, *dst;
   int i = 0;
 
